@@ -9,8 +9,9 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
         with:
+          working_directory: Presentation
           root_file: |
-            Presentation/presentation.tex
+            presentation.tex
       - name: Upload PDF file
         uses: actions/upload-artifact@v3
         with:
