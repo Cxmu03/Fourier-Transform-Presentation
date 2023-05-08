@@ -1,5 +1,12 @@
 \documentclass{beamer}
 
+\usepackage[export]{adjustbox}
+\usepackage[many]{tcolorbox}
+\usepackage{mathrsfs,amsmath}
+\usepackage{tikz}
+\usepackage{physics}
+\usepackage[ngerman]{babel}
+
 \title{Fourier Transformation}
 \subtitle{und ihre Anwendungen}
 \author{Elias Kiene, Marek Freunscht}
@@ -14,13 +21,17 @@
 \begin{frame}
     \frametitle{Themen}
     \begin{enumerate}
+        \item Fourier Reihen
         \item Was ist eine Fourier Transformation?
         \item Herleitung der Fourier Transformation
+        \item Inverse Fourier Transformation
         \item Herleitung der Diskreten Fourier Transformation
         \item Anwendungen
-        \item Fourier Reihen
     \end{enumerate}
 \end{frame}
+
+    \input{01-what-is-fourier.tex}
+    \input{02-deriving-fourier.tex}
     
 \end{document}
 
