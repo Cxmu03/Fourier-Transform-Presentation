@@ -11,8 +11,6 @@ jobs:
         with:
           root_file: |
             Presentation/presentation.tex
-            Presentation/01-what-is-fourier.tex
-            Presentation/02-deriving-fourier.tex
       - name: Upload PDF file
         uses: actions/upload-artifact@v3
         with:
