@@ -1,4 +1,4 @@
-\documentclass{beamer}
+\documentclass[aspectratio=169]{beamer}
 
 \usepackage[export]{adjustbox}
 \usepackage[many]{tcolorbox}
@@ -25,14 +25,17 @@
         \item Was ist eine Fourier Transformation?
         \item Herleitung der Fourier Transformation
         \item Inverse Fourier Transformation
-        \item Herleitung der Diskreten Fourier Transformation
+        \item Diskrete Fourier Transformation
         \item Anwendungen
     \end{enumerate}
 \end{frame}
-
+	
+	\input{./00-fourier-reihe.tex}
     \input{./01-what-is-fourier.tex}
     \input{./02-deriving-fourier.tex}
     \input{./03-inverse-ft.tex}
+    \input{./04-dft.tex}
+    \input{./04-fourier-applications.tex}
     
 \end{document}
 

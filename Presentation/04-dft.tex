@@ -1,0 +1,28 @@
+\begin{frame}
+	\frametitle{Diskrete Fourier Transformation}
+	\begin{itemize}
+		\item Fourier Transformation ist ein mathematisches Verfahren um Frequenzen von kontinuierlichen Signalen zu erhalten
+		\item Computer arbeiten nur mit diskreten Werten
+		\item Wie können zeitdiskrete Signale in ihre Frequenzen zerlegt werden?
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Diskrete Fourier Transformation}
+	\begin{align*}
+		c_k &= \sum_{n=0}^{N-1}s_n e^{-i2\pi k n / N}
+	\end{align*}
+	\begin{itemize}
+		\item N = Anzahl an Samples
+		\item $s_n$ = Sample n
+		\item k = Frequenz aus $[0,N-1]$
+		\item $c_k$ = DFT mit Information zu Amplitude und Phase
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Inverse DFT}
+	\begin{align*}
+		s_n &= \frac{1}{N} \sum_{k=0}^{N-1}c_k e^{i2\pi k n/N}
+	\end{align*}
+\end{frame}
