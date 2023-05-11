@@ -183,6 +183,7 @@ QSlider::handle:horizontal {
 
     def on_signal_frequency_change(self, value):
         value = value / 100
+        print(f"Signal Frequenz: {value}Hz")
         self.plotter.set_frequencies([(value, 1, 1, np.cos)])
         self.signal_plot.plot_data(self.plotter.signal())
         self.wrapped_signal_plot.plot_data(self.plotter.wrap_signal_around_point(self.wrapping_frequency))
@@ -192,7 +193,6 @@ QSlider::handle:horizontal {
         self.wrapped_signal_plot.axes.set_xlim([-amplitude, amplitude])
 
     def on_signal_progress_change(self, value):
-        print(value)
         self.plotter.set_progress(value)
         self.signal_plot.axes.clear()
         self.signal_plot.plot_data(self.plotter.signal())
@@ -212,6 +212,7 @@ QSlider::handle:horizontal {
 
     def on_winding_frequency_change(self, value):
         self.wrapping_frequency = value / 100
+        print(f"Wicklungsfrequenz: {self.wrapping_frequency}Hz")
         x, y = self.plotter.wrap_signal_around_point(self.wrapping_frequency)
         mean = self.plotter.calculate_average_point()
         self.wrapped_signal_plot.plot_data((x, y))

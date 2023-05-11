@@ -75,7 +75,7 @@ class FourierPlotter:
     def calculate_average_point(self) -> Tuple[float, float]:
         x, y = np.mean(self.wrapped_signal[0]), np.mean(self.wrapped_signal[1])
         
-        if len(self.average_point_signal) <= (self.wrapping_frequency * 100):
-            self.average_point_signal.append(complex(x, y))
+        #if len(self.average_point_signal) <= (self.wrapping_frequency * 100):
+        self.average_point_signal.append(complex(x, y))
 
         return x, y
